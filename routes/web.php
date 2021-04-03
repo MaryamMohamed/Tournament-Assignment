@@ -23,3 +23,5 @@ Route::Post('/store-Team', 'App\Http\Controllers\TeamController@store')->name('t
 
 Route::get('/create-Match', 'App\Http\Controllers\MatchController@create')->name('match.create');
 Route::Post('/store-Match', 'App\Http\Controllers\MatchController@store')->name('match.store');
+
+Route::get('/Teams', 'App\Http\Controllers\TeamController@index')->name('match.index');

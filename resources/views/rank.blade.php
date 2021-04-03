@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -21,49 +22,40 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center">
             
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 
                 <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
                     <div class="grid grid-cols-1 md:grid-cols-2">
                         <div class="p-6">
-                            <div class="flex items-center">
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{ route('team.create') }}" class="underline text-gray-900 dark:text-white">Team</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Create a new Team.
-                                </div>
-                            </div>
+                            <table style="width:100%">
+                                <tr>
+                                    <th>Team</th>
+                                    <th>Played</th>
+                                    <th>Won</th>
+                                    <th>Drawn</th>
+                                    <th>Lost</th>
+                                    <th>@sortablelink('points')</th>
+                                </tr>
+                                @foreach($teams as $team)
+                                <tr>
+                                    <th>{{$team->name}}</th>
+                                    <th>{{$team->played}}</th>
+                                    <th>{{$team->won}}</th>
+                                    <th>{{$team->drawn}}</th>
+                                    <th>{{$team->lost}}</th>
+                                    <th>{{$team->points}}</th>
+                                </tr>
+                                @endforeach
+                            </table>
+                            
                         </div>
-
                         <div class="p-6">
-                            <div class="flex items-center">
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{ route('match.create') }}" class="underline text-gray-900 dark:text-white">Match</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Create a new Match and add Match Score.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="{{ route('match.index') }}" class="underline text-gray-900 dark:text-white">Rank Teams</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Calculate and Display the Ranking Table Dynamically.
-                                </div>
-                            </div>
-                        </div>
-
-                        
+                        <button class="btn btn-success bg-gray-100 dark:bg-gray-900 overflow-hidden shadow ">
+                            <a href="{{ url('/') }}" class="btn btn-danger">Back</a>
+                        </button>
+                        </div>                        
                     </div>
                 </div>
 

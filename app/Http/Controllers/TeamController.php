@@ -17,8 +17,8 @@ class TeamController extends Controller
     public function index()
     {
         //
-        /*$teams = Team::all();
-        return view('match', compact('teams'));*/
+        $teams = Team::sortable(['points' => 'desc'])->paginate(10);
+        return view('rank', compact('teams'));
     }
 
     /**

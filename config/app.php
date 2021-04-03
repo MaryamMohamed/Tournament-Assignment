@@ -167,6 +167,11 @@ return [
          */
 
         /*
+        * Third Party Service Providers...
+        */
+        Kyslik\ColumnSortable\ColumnSortableServiceProvider::class,
+
+        /*
          * Application Service Providers...
          */
         App\Providers\AppServiceProvider::class,
