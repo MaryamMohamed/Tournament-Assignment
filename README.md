@@ -5,39 +5,23 @@ This mini app enables user to:
     2. create match and add match score.
     3. calculate and display ranking table of teams.
 
-## Create Team Snapshots
-<img src="snapshots/1.png" >
+## Create Team Snapshots:
+    1. write team name:
+        <img src="snapshots/1.png" >
+    2. submit team:
+        <img src="snapshots/2.png" >
+    3. team table after team submission:
+        <img src="snapshots/3.png" >
 
-## Laravel Sponsors
+## Create Match Snapshots:
+    1. input match data:
+        <img src="snapshots/4.png" >
+    2. submit match:
+        <img src="snapshots/5.png" >
+    3. match table after match submission:
+        <img src="snapshots/6.png" >
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Teams Ranking:
+    <img src="snapshots/7.png" >
+    teams table after match submission:
+    <img src="snapshots/8.png" >
