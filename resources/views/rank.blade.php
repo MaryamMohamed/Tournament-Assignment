@@ -31,15 +31,20 @@
                         <div class="p-6">
                             <table style="width:100%">
                                 <tr>
-                                    <th>Team</th>
+                                    <th>Position</th>
+                                    <th>@sortablelink('Team')</th>
                                     <th>Played</th>
                                     <th>Won</th>
                                     <th>Drawn</th>
                                     <th>Lost</th>
                                     <th>@sortablelink('points')</th>
                                 </tr>
+                                @php
+                                $x = 1;
+                                @endphp
                                 @foreach($teams as $team)
                                 <tr>
+                                    <th>{{$x++}}</th>
                                     <th>{{$team->name}}</th>
                                     <th>{{$team->played}}</th>
                                     <th>{{$team->won}}</th>

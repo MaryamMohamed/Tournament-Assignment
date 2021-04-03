@@ -18,6 +18,7 @@ class TeamController extends Controller
     {
         //
         $teams = Team::sortable(['points' => 'desc'])->paginate(10);
+        
         return view('rank', compact('teams'));
     }
 
@@ -43,11 +44,19 @@ class TeamController extends Controller
         //
         $team = new Team;
         $team->name = $request->name;
-        $team->save();
-
-        $message = "Team Has Been Submited SUCCESSFULLY";
-
-        //return view('team');
+        $team->played = 0;
+        $team->won = 0;
+        $team->drawn = 0;
+        $team->lost = 0;
+        $team->points = 0;
+        if (Team::where('name', '=', $request->name)->exists()) {
+            // team found
+            $message = "There is the same name of the Team";
+         }
+        else{
+            $team->save();
+            $message = "Team Has Been Submited SUCCESSFULLY";
+        }
         return redirect()->route('team.create')->with(['message' => $message]);
     }
 
